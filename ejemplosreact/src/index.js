@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Prueba from './components/Prueba';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+import SumarNumeros from './components/SumarNumeros';
+import SaludoPadre from './components/SaludoPadre';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Prueba nombre="Alberto" edad="20"/>
+    {/* <App /> */}
+    <SaludoPadre></SaludoPadre>
   </React.StrictMode>
 );
 
