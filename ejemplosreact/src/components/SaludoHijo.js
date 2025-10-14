@@ -1,7 +1,9 @@
 function SaludoHijo(props){
     var cambiar= props.cambiar
+    var id=props.idHijo
+    console.log(id);
 return (<>
-    <button onClick={()=>cambiar("Hola")}>Cambiar texto</button>
+    <button onClick={()=>cambiar("Alberto")}>Pulsar</button>
 </>)
 }
 
