@@ -5,28 +5,26 @@ class PadreDeportes extends Component{
     
     deportes = ["Hockey", "Karate", "Futbol", "Beisbol", "Tenis", "Padel", "Poker"];
 
-
-        
     state={
         favorito:""
     }
 
     mostrarFavorito=(deporte)=>{
-        console.log(deporte)
         this.setState({
-            favorito: this.deporte
+            favorito:deporte
         })
     }
+    
 
     render(){
         return(<>
         <h1>Padre Deportes</h1>
-        <h3>Su deporte favorito es: {this.props.deporte}</h3>
+        <h3>Su deporte favorito es: {this.state.favorito}</h3>
         <hr></hr>
         <ul>
         {
             this.deportes.map((deporte, index)=>{
-                return <HijoDeportes deporte={deporte} key={index} añdirFavorito={this.mostrarFavorito}></HijoDeportes>
+                return <HijoDeportes deporte={deporte} key={index} mostrarFavorito={this.mostrarFavorito}></HijoDeportes>
             })
         }
         </ul>

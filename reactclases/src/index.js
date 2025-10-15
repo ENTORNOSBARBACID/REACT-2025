@@ -7,6 +7,8 @@ import Contador from './components/Contador';
 import DibujosComplejos from './components/DibujosComplejos';
 import DibujosComplejosRender from './components/DibujosComplejosRender';
 import PadreDeportes from "./components/Deportes/PadreDeportes";
+import SumarAleatorioPadre from "./components/SumarAleatorio/SumarAleatorioPadre";
+import ComicPadre from "./components/Comics/ComicPadre";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +19,9 @@ root.render(
     <Contador inicio="9"></Contador> */}
     {/* <DibujosComplejos>-*</DibujosComplejos> */}
     {/* <DibujosComplejosRender></DibujosComplejosRender> */}
-    <PadreDeportes></PadreDeportes>
+    {/* <PadreDeportes></PadreDeportes> */}
+    {/* <SumarAleatorioPadre></SumarAleatorioPadre> */}
+    <ComicPadre></ComicPadre>
   </React.StrictMode>
 );
 
