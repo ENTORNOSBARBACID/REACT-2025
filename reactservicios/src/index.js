@@ -3,23 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './component/Home';
-import Router from './Router';
+import ServicioApiCustomers from './components/ServicioApiCustomers';
+import ServiceApiSuppliers from './components/ServiceApiSuppliers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <a href="/">Home </a>
-    <a href="/cine"> Cine </a>
-    <a href="/musica">Musica</a>
-    <a href="/form"> Formulario </a>
-    <a href="/collatz"> Collatz </a>
-    <a href="/tabla"> Tabla </a>
-    <a href="/tabla2"> Tabla 2 </a>
-    <a href="/seleccionmultiple"> SeleccionMultiple </a>
-    <Router></Router>
-  </React.StrictMode>
+<ServiceApiSuppliers></ServiceApiSuppliers>
 );
 
 // If you want to start measuring performance in your app, pass a function

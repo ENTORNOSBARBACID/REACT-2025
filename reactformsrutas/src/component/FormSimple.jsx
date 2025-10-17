@@ -10,6 +10,13 @@ export default class FormSimple extends Component {
         //Para recuperar el valor de un objeto react
         let nombre=this.cajaNombre.current.value;
         console.log(nombre)
+        this.setState({
+          nombre:nombre
+        })
+    }
+
+    state={
+      nombre:"" 
     }
 
     render() {
@@ -19,7 +26,12 @@ export default class FormSimple extends Component {
         <label>Nombre</label>
         <input type="text" ref={this.cajaNombre}></input>
         <button>Realizar petición</button>
+        {
+          this.state.nombre &&
+          <h2>Hola, {this.state.nombre}</h2>
+        }
       </form>
+      
       </div>
     )
   }
