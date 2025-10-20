@@ -42,17 +42,17 @@ export default class EmpleadoOficio extends Component {
         <h1>EmpleadoOficio</h1>
         <select ref={this.oficioempleado} onChange={this.mostrarOficio}>
             {
-                this.state.oficios.map((emp, index)=>{
+                this.state.oficios.map((empof, index)=>{
                     return(
-                        <option key={index} value={emp}>{emp}</option>
+                        <option key={index} value={empof}>{empof}</option>
                     )
                 })
             }
         </select>
         <div>
             {
-                this.state.empleados.map((of, index)=>{
-                   return <h2>{of.apellido}</h2>
+                this.state.empleados.map((ofemp, index)=>{
+                   return <h2>{ofemp.apellido}</h2>
                 })
             }
         </div>
