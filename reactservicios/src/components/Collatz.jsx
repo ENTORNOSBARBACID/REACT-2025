@@ -6,8 +6,8 @@ export default class Collatz extends Component {
         let numero=parseInt(this.props.numero);
         let aux=[];
         console.log(this.props.numero);
-        while(numero != 1){
-            if(numero%2==0){
+        while(numero !== 1){
+            if(numero%2===0){
                 numero=numero/2
             }
             else{
@@ -23,8 +23,12 @@ export default class Collatz extends Component {
     state={
         numeros:[]
     }
+    componentDidUpdate=(old)=>{
+        if(this.props.numero !== old.numero)
+        this.generarCollatz()
+};
     componentDidMount=()=>{
-        this.generarCollatz();
+        this.generarCollatz()
     }
   render() {
     return (
