@@ -38,10 +38,13 @@ export default class MenuLinks extends Component {
           <NavLink className="nav-link" to="/">Home</NavLink >
         </li>
         <li class="nav-item">
+          <NavLink className="nav-link" to="/hospital">Hospitales</NavLink >
+        </li>
+        <li class="nav-item">
           <NavLink className="nav-link" to="/create">Crear hospital</NavLink >
         </li>
         <li class="nav-item dropdown">
-          <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown">Hospitales</NavLink >
+          <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown">Doctores por hospital</NavLink >
           <ul class="dropdown-menu">
              {
               this.state.hospitales.map((h, index)=>{
