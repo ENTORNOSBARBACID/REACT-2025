@@ -14,16 +14,15 @@ export default class MostrarTrabajadores extends Component {
 
     loadTrabajadores=()=>{
         
-
+        this.data="";
             for(var id of this.props.ids){
 
-                this.data="idhospital="+id+"&";
+                this.data+="idhospital="+id+"&";
             }
 
 
         this.data=this.data.substring(0, this.data.length - 1);
         this.requestTrabajadores="api/trabajadores/trabajadoreshospitales?"+this.data;
-
 
         axios.get(this.url+ this.requestTrabajadores).then(response=>{
             this.setState({
@@ -32,7 +31,8 @@ export default class MostrarTrabajadores extends Component {
         })
     }
 
-    incrementar=()=>{
+    incrementar=(event)=>{
+        event.preventDefault()
         var incremento=this.cajaIncremento.current.value;
         var request="api/trabajadores/UpdateSalarioTrabajadoresHospitales?incremento="+incremento+"&"+this.data;
         console.log(request) 
@@ -47,7 +47,7 @@ export default class MostrarTrabajadores extends Component {
         this.loadTrabajadores()
     }
     componentDidUpdate=(old)=>{
-        if(old.ids!=this.props.ids){
+        if(old.ids!==this.props.ids){
             this.loadTrabajadores()
         }
     }
