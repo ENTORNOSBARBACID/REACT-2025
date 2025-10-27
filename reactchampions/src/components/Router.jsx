@@ -5,6 +5,9 @@ import Home from './Home';
 import Menu from './Menu';
 import Details from './Details';
 import Jugadores from './Jugadores';
+import JugadorDetail from './JugadorDetail';
+import Apuestas from './Apuestas';
+import CreateApuesta from './CreateApuesta';
 
 export default class Router extends Component {
   render() {
@@ -18,6 +21,11 @@ export default class Router extends Component {
 
         return(<Jugadores id={id}></Jugadores>)
     }
+    function JugadoresDetailElement(){
+        let {id}=useParams();
+
+        return(<JugadorDetail id={id}></JugadorDetail>)
+    }
     return (
         <BrowserRouter>
         <Menu></Menu>
@@ -25,6 +33,9 @@ export default class Router extends Component {
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/details/:id" element={<DetailsElement></DetailsElement>}></Route>
                 <Route path="/jugadores/:id" element={<JugadoresElement></JugadoresElement>}></Route>
+                <Route path="/jugadordetails/:id" element={<JugadoresDetailElement/>}></Route>
+                <Route path="/apuestas" element={<Apuestas/>}></Route>
+                <Route path="/crearapuesta" element={<CreateApuesta/>}></Route>
             </Routes>
         </BrowserRouter>
     )

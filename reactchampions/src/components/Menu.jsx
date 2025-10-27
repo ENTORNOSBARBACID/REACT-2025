@@ -40,7 +40,7 @@ export default class Menu extends Component {
           <NavLink className="nav-link" to="/">Home</NavLink >
         </li>
         <li class="nav-item">
-          <NavLink className="nav-link" to="">Apuestas</NavLink >
+          <NavLink className="nav-link" to="/apuestas">Apuestas</NavLink >
         </li>
         <li class="nav-item dropdown">
           <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown">Equipos</NavLink >
